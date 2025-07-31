@@ -2,8 +2,6 @@
 
 <p><strong>Spotify Wallpaper</strong>, dinlemekte olduğunuz Spotify şarkısının albüm kapağını ve şarkı bilgisini KDE masaüstü arka planınız olarak otomatik şekilde ayarlayan bir Bash betiğidir.</p>
 
-<img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/wall.png" alt="Önizleme">
-
 <blockquote>
   KDE kullanıyorsanız ve müziği sadece duymak değil, aynı zamanda yaşamak istiyorsanız, bu araç tam size göre.
 </blockquote>
