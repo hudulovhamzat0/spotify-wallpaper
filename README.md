@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <title>Spotify Wallpaper for KDE Plasma</title>
-  <style>
-    body { font-family: sans-serif; line-height: 1.6; margin: 2rem; max-width: 900px; background: #fff; color: #222; }
-    h1, h2, h3 { color: #333; }
-    code { background: #f4f4f4; padding: 0.2em 0.4em; border-radius: 4px; }
-    pre { background: #f4f4f4; padding: 1em; border-radius: 4px; overflow-x: auto; }
-    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    blockquote { color: #666; border-left: 4px solid #ccc; padding-left: 1em; margin-left: 0; }
-  </style>
-</head>
-<body>
-
 <h1>🎵 Spotify Wallpaper for KDE Plasma</h1>
 
 <p><strong>Spotify Wallpaper</strong>, dinlemekte olduğunuz Spotify şarkısının albüm kapağını ve şarkı bilgisini KDE masaüstü arka planınız olarak otomatik şekilde ayarlayan bir Bash betiğidir.</p>
