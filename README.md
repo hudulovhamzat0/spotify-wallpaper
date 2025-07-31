@@ -2,7 +2,7 @@
 
 <p><strong>Spotify Wallpaper</strong>, dinlemekte olduğunuz Spotify şarkısının albüm kapağını ve şarkı bilgisini KDE masaüstü arka planınız olarak otomatik şekilde ayarlayan bir Bash betiğidir.</p>
 
-<img src="https://via.placeholder.com/1000x562.png?text=Preview+Placeholder" alt="Önizleme">
+<img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/wall.png" alt="Önizleme">
 
 <blockquote>
   KDE kullanıyorsanız ve müziği sadece duymak değil, aynı zamanda yaşamak istiyorsanız, bu araç tam size göre.
@@ -18,7 +18,7 @@
 </ul>
 
 <h2>🖥️ Ekran Görüntüsü</h2>
-<img src="https://via.placeholder.com/1000x562.png?text=Wallpaper+Example" alt="Wallpaper Örneği">
+<img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/wall.png" alt="Wallpaper Örneği">
 
 <h2>⚙️ Gereksinimler</h2>
 
@@ -78,16 +78,14 @@ FORMATTED_TEXT=$(echo "$TEXT" | fold -s -w 40)</code></pre>
 
 <h2>💡 Gelecek Planlar</h2>
 <ul>
-  <li>[ ] Şarkı sözlerini eklemek (örneğin Genius API ile)</li>
   <li>[ ] Çözünürlük desteğini dinamik yapmak</li>
-  <li>[ ] Plasma 6 uyumluluğunu test etmek</li>
   <li>[ ] Albüm rengine göre arka plan gradient'i</li>
 </ul>
 
 <h2>🤝 Katkıda Bulun</h2>
 
 <p>Katkılarınızı memnuniyetle kabul ediyoruz! Forklayın, geliştirin, pull request gönderin.</p>
-<p>Ayrıca <a href="https://github.com/kullaniciadi/spotify-wallpaper/issues">Issue</a> açarak önerilerinizi paylaşabilirsiniz.</p>
+<p>Ayrıca <a href="https://github.com/hudulovhamzat0/spotify-wallpaper/issues">Issue</a> açarak önerilerinizi paylaşabilirsiniz.</p>
 
 <h2>📄 Lisans</h2>
 
@@ -98,7 +96,6 @@ FORMATTED_TEXT=$(echo "$TEXT" | fold -s -w 40)</code></pre>
 <blockquote>
   Bu proje KDE kullanıcılarının müzik deneyimini görsel olarak daha keyifli hale getirmek amacıyla hazırlandı.
   <br><br>
-  “Müzik, ruhun gıdasıysa, neden masaüstü de onunla beslenmesin?” 🎧
 </blockquote>
 
 </body>
