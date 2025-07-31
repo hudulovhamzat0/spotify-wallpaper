@@ -28,7 +28,7 @@ If you love music and want your desktop to reflect your current vibe, this tool 
 </ul>
 
 <h2 style="color:#333;">🖥️ Screenshot</h2>
-<img src="wall.png" alt="Wallpaper Example" style="width:100%; border:1px solid #ccc; border-radius:8px;">
+<img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/wall.png" alt="Wallpaper Example" style="width:100%; border:1px solid #ccc; border-radius:8px;">
 
 <h2 style="color:#333;">⚙️ Requirements</h2>
 <table style="border-collapse: collapse; width: 100%;">
