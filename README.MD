@@ -11,7 +11,7 @@ If music feeds your soul, let your desktop feed on it too.
 <h2 style="font-size: 2em;">📸 What It Looks Like</h2>
 
 <p align="center">
-  <img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/ss.png" alt="Wallpaper Example" style="width:100%; border:1px solid #ccc; border-radius:8px;">
+  <img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/ss.png" alt="Wallpaper Example " style="width:100%; border:1px solid #ccc; border-radius:8px;">
 </p>
 
 ---
