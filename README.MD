@@ -1,36 +1,45 @@
-<h1 style="color:#333;">🎵 Spotify Wallpaper for KDE Plasma</h1>
+<h1 align="center" style="font-size: 2.5em;">🎵 Spotify Wallpaper for KDE Plasma + Photo</h1>
 
-<p><strong>Spotify Wallpaper</strong> is a lightweight Bash script that dynamically sets your desktop wallpaper to the currently playing Spotify track’s album cover, with artist and song info — now featuring a beautiful gradient background that matches the album art.</p>
+<p align="center"><strong>Spotify Wallpaper</strong> is a powerful and beautiful script that transforms your KDE Plasma desktop by blending music and aesthetics. It fetches the current Spotify song, extracts colors from its album cover, adds a vibrant gradient background — and overlays an Photo  based on the detected vibe. 💿🎨👧</p>
 
 <blockquote style="color:#666; border-left:4px solid #ccc; padding-left:1em;">
-If you love music and want your desktop to reflect your current vibe, this tool is for you.
+If music feeds your soul, let your desktop feed on it too.
 </blockquote>
 
-<h2 style="color:#333;">📦 Releases</h2>
-<p>You can download the latest stable version from the <a href="https://github.com/hudulovhamzat0/spotify-wallpaper/releases" target="_blank">GitHub Releases page</a>.</p>
-<p>Each release includes the latest version of:</p>
+---
+
+<h2 style="font-size: 2em;">📸 What It Looks Like</h2>
+
+<p align="center">
+  <img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/ss.png" alt="Wallpaper Example" style="width:100%; border:1px solid #ccc; border-radius:8px;">
+</p>
+
+---
+
+<h2 style="font-size: 2em;">👧 Character Matching</h2>
+
+<p>This script selects one of your provided Photo images based on the song's color palette. Each color triggers a different themed character:</p>
+
+
+---
+
+<h2 style="font-size: 2em;">✨ Features</h2>
+
 <ul>
-  <li><code>spotify-wallpaper.sh</code> (the main script)</li>
-  <li><code>install.sh</code> (the installer)</li>
-  <li><code>README.md</code> and <code>README.html</code></li>
+  <li>🎨 Extracts dominant and center colors from Spotify album covers</li>
+  <li>🌈 Creates a smooth gradient background based on those colors</li>
+  <li>📀 Centers the album art</li>
+  <li>🖋️ Adds the track name & artist with smart line wrapping</li>
+  <li>👧 Selects an Photo that matches the song’s mood</li>
+  <li>🔁 Automatically updates on song change</li>
+  <li>🧼 Cleans up old images to save space</li>
+  <li>🐧 Built for KDE Plasma using <code>qdbus</code></li>
 </ul>
 
+---
 
+<h2 style="font-size: 2em;">⚙️ Requirements</h2>
 
-<h2 style="color:#333;">✨ Features</h2>
-<ul>
-  <li>🎨 Extracts dominant colors from the album cover and creates a smooth gradient background</li>
-  <li>📀 Overlays the Spotify album cover, centered and neatly resized</li>
-  <li>🖋️ Displays the artist and song title under the cover with automatic text wrapping</li>
-  <li>🔁 Updates your wallpaper automatically when the song changes</li>
-  <li>🧼 Deletes old wallpaper images to keep your system clean</li>
-  <li>🐧 Designed specifically for KDE Plasma using <code>qdbus</code></li>
-</ul>
-
-<h2 style="color:#333;">🖥️ Screenshot</h2>
-<img src="https://github.com/hudulovhamzat0/spotify-wallpaper/blob/main/ss.png" alt="Wallpaper Example" style="width:100%; border:1px solid #ccc; border-radius:8px;">
-
-<h2 style="color:#333;">⚙️ Requirements</h2>
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
@@ -41,78 +50,94 @@ If you love music and want your desktop to reflect your current vibe, this tool 
   <tbody>
     <tr>
       <td style="border:1px solid #ddd; padding:8px;"><code>playerctl</code></td>
-      <td style="border:1px solid #ddd; padding:8px;">Get metadata from Spotify</td>
+      <td style="border:1px solid #ddd; padding:8px;">Fetch current Spotify metadata</td>
     </tr>
     <tr>
       <td style="border:1px solid #ddd; padding:8px;"><code>wget</code></td>
-      <td style="border:1px solid #ddd; padding:8px;">Download the album cover</td>
+      <td style="border:1px solid #ddd; padding:8px;">Download album cover</td>
     </tr>
     <tr>
       <td style="border:1px solid #ddd; padding:8px;"><code>imagemagick</code></td>
-      <td style="border:1px solid #ddd; padding:8px;">Generate gradient and compose final wallpaper</td>
+      <td style="border:1px solid #ddd; padding:8px;">Create final wallpaper image</td>
     </tr>
     <tr>
       <td style="border:1px solid #ddd; padding:8px;"><code>qdbus</code></td>
-      <td style="border:1px solid #ddd; padding:8px;">Change KDE wallpaper</td>
+      <td style="border:1px solid #ddd; padding:8px;">Change KDE Plasma wallpaper</td>
     </tr>
   </tbody>
 </table>
 
-<h2 style="color:#333;">🚀 Installation</h2>
-<pre style="background:#f4f4f4; padding:1em; border-radius:4px;"><code>git clone https://github.com/hudulovhamzat0/spotify-wallpaper.git
+---
+
+<h2 style="font-size: 2em;">🚀 Installation</h2>
+
+<pre><code>git clone https://github.com/hudulovhamzat0/spotify-wallpaper.git
 cd spotify-wallpaper
 bash install.sh
 </code></pre>
 
-<p>The script will be copied to <code>~/.local/bin/spotify-wallpaper.sh</code> for easy access.</p>
+<p>Installer places the script in <code>~/.local/bin/spotify-wallpaper.sh</code> for easy use.</p>
 
-<h2 style="color:#333;">▶️ Usage</h2>
-<p>To start the script, run:</p>
-<pre style="background:#f4f4f4; padding:1em; border-radius:4px;"><code>bash ~/.local/bin/spotify-wallpaper.sh</code></pre>
+---
 
-<p>It checks every 5 seconds for a new song and updates your KDE wallpaper accordingly.</p>
+<h2 style="font-size: 2em;">▶️ Usage</h2>
+
+Run with your own character folder:
+
+<pre><code>bash spotify-wallpaper.sh -p /path/to/your/photos</code></pre>
+
+Or run a custom script instead:
+
+<pre><code>bash spotify-wallpaper.sh -x script/my_script.sh</code></pre>
+
+To stop the loop, use <code>Ctrl + C</code> or the included GUI.
+
+---
+
+<h2 style="font-size: 2em;">🖥️ Optional GUI</h2>
+
+<p>Launch with:</p>
+
+<pre><code>python3 gui.py</code></pre>
+
+- Toggle "Include Photos"
+- Select folder only if needed
+- Start/Stop the main script easily
+
+---
+
+<h2 style="font-size: 2em;">🐞 Debugging</h2>
+
+Logs are written to:
+
+<pre><code>/tmp/spotify_wallpaper_debug.log</code></pre>
+
+---
+
+<h2 style="font-size: 2em;">📦 Releases</h2>
+
+Download the latest version from  
+👉 <a href="https://github.com/hudulovhamzat0/spotify-wallpaper/releases" target="_blank">GitHub Releases</a>
+
+Includes:
+- `spotify-wallpaper.sh`
+- `install.sh`
+- `README.md` and `README.html`
+
+---
+
+<h2 style="font-size: 2em;">📄 License</h2>
+
+This project is licensed under the MIT License.  
+Feel free to fork, modify, and contribute!
+
+---
+
+<h2 style="font-size: 2em;">🙏 Credits</h2>
+
+Thanks to everyone who loves clean desktops and good music.  
+Special thanks to the KDE and open source community. 💙
 
 <blockquote style="color:#666; border-left:4px solid #ccc; padding-left:1em;">
-To launch it automatically on login, add it to KDE's Startup Applications.
-</blockquote>
-
-
-<h2 style="color:#333;">🛠️ Customization</h2>
-
-<h3 style="color:#444;">🎚 Font</h3>
-<p>The default font is <code>DejaVuSans-Bold</code>. If <code>OpenSans-Bold</code> is available, it will be used instead.</p>
-
-<h3 style="color:#444;">🖋️ Text Wrapping</h3>
-<p>Text is word-wrapped to 40 characters to ensure clean layout below the album art.</p>
-
-<pre style="background:#f4f4f4; padding:1em; border-radius:4px;"><code>TEXT="$ARTIST - $TITLE"
-FORMATTED_TEXT=$(echo "$TEXT" | fold -s -w 40)</code></pre>
-
-<h3 style="color:#444;">🎨 Gradient Colors</h3>
-<p>The gradient background is automatically generated using the top and bottom dominant pixels of the album cover image.</p>
-
-<pre style="background:#f4f4f4; padding:1em; border-radius:4px;"><code>COLORS=($(convert cover.jpg -resize 1x2\! -format "%[pixel:u.p{0,0}] %[pixel:u.p{0,1}]" info:-))
-convert -size 1920x1080 gradient:"${COLORS[0]}"-"${COLORS[1]}" bg.jpg</code></pre>
-
-<h2 style="color:#333;">🐞 Debugging</h2>
-<p>All logs are written to:</p>
-<pre style="background:#f4f4f4; padding:1em; border-radius:4px;"><code>/tmp/spotify_wallpaper_debug.log</code></pre>
-
-<h2 style="color:#333;">🗺️ Roadmap</h2>
-<ul>
-  <li>[x] Auto background gradient from album art 🎉</li>
-  <li>[ ] Dynamic resolution detection</li>
-  <li>[ ] KDE Plasma 6 compatibility testing</li>
-</ul>
-
-<h2 style="color:#333;">🤝 Contributing</h2>
-<p>Feel free to fork, improve, and submit pull requests. Suggestions and bug reports are welcome on the <a href="https://github.com/hudulovhamzat0/spotify-wallpaper/issues">Issue Tracker</a>.</p>
-
-<h2 style="color:#333;">📄 License</h2>
-<p>This project is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
-
-<h2 style="color:#333;">🙏 Thanks</h2>
-<blockquote style="color:#666; border-left:4px solid #ccc; padding-left:1em;">
-Built to visually match your music and vibe in real time on your KDE desktop.<br><br>
-“If music feeds the soul, let your desktop feed on it too.” 🎧
+“Your music. Your desktop. In sync.” 🎧
 </blockquote>

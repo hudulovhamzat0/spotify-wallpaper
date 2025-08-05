@@ -1,26 +1,80 @@
 #!/bin/bash
 # Spotify Wallpaper Script - KDE Plasma with Anime Characters
-# Dinlenen şarkının albüm kapağını alır, kapağın renkleriyle gradient wallpaper yapar ve anime karakteri ekler
+
+# Parametreler: -p <karakter klasörü> veya -x <dış script>
+CHARACTER_DIR=""
+EXTERNAL_SCRIPT=""
+
+while getopts ":p:x:" opt; do
+  case ${opt} in
+    p )
+      CHARACTER_DIR="$OPTARG"
+      ;;
+    x )
+      EXTERNAL_SCRIPT="$OPTARG"
+      ;;
+    \? )
+      echo "Geçersiz seçenek: -$OPTARG" >&2
+      exit 1
+      ;;
+    : )
+      echo "Seçenek -$OPTARG bir değer gerektiriyor." >&2
+      exit 1
+      ;;
+  esac
+done
+
+# -p ve -x birlikte kullanılamaz
+if [[ -n "$CHARACTER_DIR" && -n "$EXTERNAL_SCRIPT" ]]; then
+  echo "HATA: -p ve -x aynı anda kullanılamaz!"
+  echo "Kullanım:"
+  echo "  bash run.sh -p /path/to/anime"
+  echo "  bash run.sh -x /path/to/script.sh"
+  exit 1
+fi
+
+# Eğer -x verildiyse dış scripti çalıştır
+if [[ -n "$EXTERNAL_SCRIPT" ]]; then
+  if [[ -x "$EXTERNAL_SCRIPT" ]]; then
+    echo "Dış script çalıştırılıyor: $EXTERNAL_SCRIPT"
+    exec "$EXTERNAL_SCRIPT"
+  else
+    echo "HATA: '$EXTERNAL_SCRIPT' çalıştırılamaz veya yok."
+    exit 1
+  fi
+fi
+
+# Eğer -p verilmediyse hata
+if [[ -z "$CHARACTER_DIR" ]]; then
+  echo "HATA: Karakter klasörü belirtilmedi!"
+  echo "Kullanım: bash run.sh -p /path/to/anime"
+  exit 1
+fi
+
+# Karakter dosyaları bu klasöre göre tanımlanacak
+CHARACTER_BLACK="$CHARACTER_DIR/black.png"
+CHARACTER_BLUE="$CHARACTER_DIR/blue.png"
+CHARACTER_GREEN="$CHARACTER_DIR/green.png"
+CHARACTER_PINK="$CHARACTER_DIR/pink.png"
+CHARACTER_RED="$CHARACTER_DIR/red.png"
+CHARACTER_WHITE="$CHARACTER_DIR/white.png"
+CHARACTER_YELLOW="$CHARACTER_DIR/yellow.png"
+
+# Font kontrolü
+FONT_PATH="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+[ -f "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf" ] && FONT_PATH="/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf"
 
 LOGFILE="/tmp/spotify_wallpaper_debug.log"
 echo "Başladı: $(date)" > "$LOGFILE"
 
-FONT_PATH="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-[ -f "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf" ] && FONT_PATH="/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf"
-
-# Character paths
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CHARACTER_BLACK="$SCRIPT_DIR/anime/black.png"
-CHARACTER_BLUE="$SCRIPT_DIR/anime/blue.png"
-CHARACTER_GREEN="$SCRIPT_DIR/anime/green.png"
-CHARACTER_PINK="$SCRIPT_DIR/anime/pink.png"
-CHARACTER_RED="$SCRIPT_DIR/anime/red.png"
-CHARACTER_WHITE="$SCRIPT_DIR/anime/white.png"
-CHARACTER_YELLOW="$SCRIPT_DIR/anime/yellow.png"
-
 LAST_TITLE=""
 LAST_COVER_URL=""
 OLD_WALL=""
+
+
+# Aşağıdaki while döngüsü, ve kalan tüm orijinal kodun olduğu gibi devam etsin.
+# Hiçbir değişikliğe gerek yok çünkü karakter dosyaları artık dışarıdan geldi:
+# while true; do ... gibi devam eder.
 
 while true; do
     if ! playerctl --player=spotify status &> /dev/null; then
